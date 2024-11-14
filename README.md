@@ -1,4 +1,4 @@
-<h3>Language and Tools: Java,SpringBoot,HTML,Bootstrap,MySql,Xamp </h3> 
+Language and Tools: Java,SpringBoot,HTML,Bootstrap,MySql,Xamp 
 <h4>Signup Page:</h4>
 ![signup page](https://github.com/user-attachments/assets/ad830869-2e4b-4089-9171-5ceb774bf2a9)
 <h4>Student Login:</h4>
