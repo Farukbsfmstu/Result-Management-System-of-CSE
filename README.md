@@ -1,5 +1,14 @@
-Language and Tools: Java,SpringBoot,HTML,Bootstrap,MySql,Xamp 
-Signup Page:
+## Languages and Tools
+
+**Languages and Tools:**  
+🚀 **Java**  | 🌱 **Spring Boot** | 🌐 **HTML** | 🎨 **Bootstrap** | 🗄️ **MySQL** | 🛠️ **XAMPP**
+
+---
+
+
+![Signup Page](link-to-your-image.png)
+
+### Signup Page:
 ![signup page](https://github.com/user-attachments/assets/ad830869-2e4b-4089-9171-5ceb774bf2a9)
 Student Login:
 ![student login](https://github.com/user-attachments/assets/33c9f600-1db1-445b-801f-259828fad26c)
