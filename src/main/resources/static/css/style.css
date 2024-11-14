@@ -1,0 +1,35 @@
+
+
+
+/* common button */
+.common-button :hover{
+    background-color: #FF6263;
+    color: whitesmoke;
+    transition: ease-in-out 2s;
+}
+
+/* form  start*/
+
+.link-button :hover{
+    background-color: tomato !important;
+    color: whitesmoke;
+    opacity: .9;
+    transition: ease-out 2s;
+    transform: scale(1.2,1.4);
+}
+.common-button :hover{
+    background-color: black !important;
+    color: white;
+    opacity: .8;
+    transition: ease-in 2s;
+}
+.year{
+    margin-left: -140px;
+}
+/* form end */
+/* next -button  */
+.next-button{
+    margin-left: 890px;
+}
+
+

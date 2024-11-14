@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http:www.thymeleaf.com"th:replace="admins/BaseAdmin::Layout(~{::section})">
+	<head>
+		<title>result select</title>
+	    <meta charset="UTF-8">
+
+
+<!-- SEO Meta-->
+<meta name="description" content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University also known as BSFMSTU is the only state supported university located in Jamalpur, Bangladesh. It is the 44th university and the 10th Science and Technology university in Bangladesh.">
+<meta name="keywords" content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University, BSFMSTU, Jamalpur, CSE, BSFMSTU, Admission">
+
+
+<meta property="og:url"                content="https://bsfmstu.ac.bd/admission" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="Rrgistration will start from 12-09-2019. Admission at Shahjalal University of Science and Technology" />
+<meta property="og:description"        content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University also known as BSFMSTU is the only state supported university located in Jamalpur, Bangladesh. It is the 44th university and the 10th Science and Technology university in Bangladesh. " />
+<meta property="og:image"              content="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png"/>
+
+
+
+
+
+<!-- viewport scale-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="secret" content="PlZYiz2HEDlD5HJUEngxdGoLK94LXrpomKAX8dWg" />
+
+<!-- Favicon and Apple Icons-->
+<link rel="icon" type="image/x-icon" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+<link rel="shortcut icon" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+<link rel="apple-touch-icon-precomposed" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+
+
+<!--Google fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700%7CWork+Sans:400,500">
+
+<!-- Icon fonts -->
+<link rel="stylesheet" href="" th:href="@{/css/font_login.css}">
+<link rel="stylesheet" href="" th:href="@{/css/themify_login.css}">
+
+<!-- stylesheet-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href=""  th:href="@{/css/themifyy_login.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/login_vendor.css}" >
+<link rel="stylesheet" href="" th:href="@{/css/Login_styel.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/coustom_style.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/custom.css}">
+
+
+<section>
+	  
+ <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+         <div>
+			 <h3><p class="text-success">All Accounts</p></h3>
+		 </div>
+     
+       
+         <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert">
+
+                                      <p th:text="${session.message.content}"></p>
+
+                                       <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+                            
+                                 </div>
+                        	  </div>
+         
+		<nav class="navbar navbar-light bg-light">
+			
+			<!--*****************************STSRT Table**************************************************-->
+			
+			
+			<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+       <th scope="col">Role</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+	<tr th:each="student : ${accounts}">
+		<td th:text="${student.ID}"></td>
+		<td th:text="${student.username}"></td>
+		<td th:text="${student.password}"></td>
+		<td th:text="${student.role}"></td>
+		<td> 
+		<a href="#"onclick="deleteResult(this)" th:data-id="${student.ID}" path="DeleteStdAcc" class="btn btn-danger">Delete</a>
+		<a href="#" th:href="@{'/admin/editAcc/'+${student.ID}}" class="btn btn-success">Edit</a>
+		</td>
+	</tr>
+   
+  </tbody>
+</table>
+			
+		<!--	<form class="form-inline"  th:action="@{/admin/addresult}" method="post">
+				
+					<label>Please Select Student Session</label>
+					<select class="form-control" id="sessionSelect" name="selectedSession" onchange="captureSelectedSession()">
+						<option value="0">--Select a session--</option>
+						<!-- Thymeleaf syntax to loop over sessions fetched from the database 
+						<option th:each="selectedSession : ${sessions}" th:value="${selectedSession}" th:text="${selectedSession}">
+						</option>
+					</select>
+				
+				<div class="text-right" style="padding-left: 10px;">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Next</button>
+			
+				</div>
+			</form> --> 
+		</nav>
+         
+     
+   
+
+
+
+
+</section>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+.common-text:hover{
+    background-color:deepskyblue;
+     border-radius: 4%;
+    width: 252px;
+    margin-left:-12px ;
+}
+.home-button{
+    padding: 0 387px 0 386px;
+    border-radius: 2%;
+    border: none;
+}
+.bg-home-color{
+    background-color: #025c53;
+}
+.sidebar{
+    /* background-image: linear-gradient(red, #12B0E8,tomato); */
+    background-color: #025c53 !important;
+    opacity: .9; 
+}
+.news-color{
+    color: tomato;
+}
+
+.even-text:hover{
+    color: tomato;
+    transition: ease-out 1s;
+}
+.menubar:hover{
+    color:tomato !important;
+}
+.common-design{
+    background-color: #025c53 !important;
+}
+/* practice */
+
+/* ul.our-primary-menu li{
+    position: relative;
+} */
+/* dropdown start */
+.secondary-menu{
+    list-style: none;
+    visibility: hidden;
+    top: 50px;
+    padding-left:0;
+    height: 110px;
+    width: 290px;
+    line-height: 35PX;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    transition: 3s; 
+    position: absolute;
+    background-color: #025c53;
+    }
+
+ul.our-primary-menu li:hover .secondary-menu{
+        visibility: visible;
+        top: 15px;
+    }
+ul.our-primary-menu li a{
+    padding: 10px;
+    font-size: 15px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+/* dropdownment end */

@@ -1,0 +1,14 @@
+.link-button :hover{
+    background-color: tomato !important;
+    color: whitesmoke;
+    opacity: .9;
+    transition: ease-out 2s;
+    transform: scale(1.2,1.4);
+}
+.common-button :hover{
+    background-color: black !important;
+    color: white;
+    opacity: .8;
+    transition: ease-in 2s;
+}
+

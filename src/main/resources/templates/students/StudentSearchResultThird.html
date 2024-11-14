@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http:www.thymeleaf.com" th:replace="students/BaseStudent::Layout(~{::section})">
+	<head>
+		<title>Find third semester</title>
+	    <meta charset="UTF-8">
+
+
+<!-- SEO Meta-->
+<meta name="description" content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University also known as BSFMSTU is the only state supported university located in Jamalpur, Bangladesh. It is the 44th university and the 10th Science and Technology university in Bangladesh.">
+<meta name="keywords" content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University, BSFMSTU, Jamalpur, CSE, BSFMSTU, Admission">
+
+
+<meta property="og:url"                content="https://bsfmstu.ac.bd/admission" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="Rrgistration will start from 12-09-2019. Admission at Shahjalal University of Science and Technology" />
+<meta property="og:description"        content="Bangamata Sheikh Fojilatunnesa Mujib Science & Technology University also known as BSFMSTU is the only state supported university located in Jamalpur, Bangladesh. It is the 44th university and the 10th Science and Technology university in Bangladesh. " />
+<meta property="og:image"              content="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png"/>
+
+
+
+
+
+<!-- viewport scale-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="secret" content="PlZYiz2HEDlD5HJUEngxdGoLK94LXrpomKAX8dWg" />
+
+<!-- Favicon and Apple Icons-->
+<link rel="icon" type="image/x-icon" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+<link rel="shortcut icon" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+<link rel="apple-touch-icon-precomposed" href="https://bsfmstu.ac.bd/wp-content/uploads/2019/08/logo.png">
+
+
+<!--Google fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700%7CWork+Sans:400,500">
+
+<!-- Icon fonts -->
+<link rel="stylesheet" href="" th:href="@{/css/font_login.css}">
+<link rel="stylesheet" href="" th:href="@{/css/themify_login.css}">
+
+<!-- stylesheet-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href=""  th:href="@{/css/themifyy_login.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/login_vendor.css}" >
+<link rel="stylesheet" href="" th:href="@{/css/Login_styel.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/coustom_style.css}">
+<link rel="stylesheet" href=""  th:href="@{/css/custom.css}">
+	</head>
+
+<body>
+		  
+<section>
+    <div class="container padding-y-60">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                    <!--******************************************************search********************************* --> 
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline" th:action="@{/student/ThirdSemesterIndividualResult}" method="post" onsubmit="return validateForm()">
+                            <div class="input-group">
+                                <input class="form-control mr-sm-2 " type="search" name="StudentsID" id="StudentsID" placeholder="Enter Student your ID" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+        </div> <!-- END row-->
+    </div> <!-- END container-->
+
+  <!-- <Session message alert"  > -->
+                               
+                               <div class="text-center">
+                                <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert">
+
+                                      <p th:text="${session.message.content}"></p>
+
+                                       <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+                            
+                                 </div>
+                        	  </div>
+
+    <!-- *******************************Table******************************************* -->
+    <div th:if="${YourResult != null}" >
+		 <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">ACCO2111</th>
+                    <th scope="col">HUM2111</th>
+                    <th scope="col">MATH2111</th>
+                    <th scope="col">CSE2111</th>
+                    <th scope="col">CSE2121</th>
+                    <th scope="col">CSE2122</th>
+                    <th scope="col">CSE2131</th>
+                    <th scope="col">CSE2132</th>
+                    <th scope="col">Exam Year</th>
+                    <th scope="col">CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="results : ${YourResult}">
+                    <td th:text="${results.ID}"></td>
+                    <td th:text="${results.Session}"></td>
+                    <td th:text="${results.name}"></td>
+                    <td th:text="${results.ACCO2111}"></td>
+                    <td th:text="${results.HUM2111}"></td>
+                    <td th:text="${results.MATH2111}"></td>
+                    <td th:text="${results.CSE2111}"></td>
+                    <td th:text="${results.CSE2121}"></td>
+                    <td th:text="${results.CSE2122}"></td>
+                    <td th:text="${results.CSE2131}"></td>
+                    <td th:text="${results.CSE2132}"></td>
+                    <td th:text="${results.year}"></td>
+                    <td th:text="${results.CGPA}"></td>
+                </tr>
+            </tbody>
+        </table>
+		 </div>
+    </div>
+    
+
+<script>
+    function validateForm() {
+        var studentsID = document.getElementById('StudentsID').value;
+        if (studentsID.trim() === "") {
+            alert("Error: Please enter your ID.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</section>
+
+
+
+
+
+
+	</body>
+</html>

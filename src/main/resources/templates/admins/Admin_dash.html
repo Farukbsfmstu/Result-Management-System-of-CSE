@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http:www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+<link rel="stylesheet" href="" th:href="@{/css/admin.css}">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Admin Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Notice</a></li>
+                <li><a href=" "th:href="@{/addresult}" method="Get">Add Result</a></li>
+                <li><a href="#">Student List</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- Content of your student dashboard goes here -->
+            Hy how are you
+        </div>
+    </div>
+</body>
+</html>

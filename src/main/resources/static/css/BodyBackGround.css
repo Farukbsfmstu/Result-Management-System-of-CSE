@@ -1,0 +1,14 @@
+
+	 html, body {
+    height: 100%;
+}
+
+.BackgroundBody {
+    min-height: 100vh;
+    background-repeat: repeat;
+    background-size: auto !important;
+    background-color: #e2e8dc;
+    background-image: url('/Image/flower.png');
+    background-attachment: fixed;
+}
+
